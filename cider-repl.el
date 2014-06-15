@@ -392,7 +392,7 @@ Return the position of the prompt beginning."
     (cider-save-marker cider-repl-output-end
       (unless (bolp) (insert-before-markers "\n"))
       (let ((prompt-start (point))
-            (prompt (format "%s> " namespace)))
+            (prompt "=> "))
         (cider-propertize-region
             '(face cider-repl-prompt-face read-only t intangible t
                    cider-prompt t
